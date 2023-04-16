@@ -1,0 +1,9 @@
+fastapi
+python-jose
+pydantic
+uvicorn
+motor
+pymongo
+graphene
+starlette-graphene3
+
