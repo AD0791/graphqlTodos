@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+  gqltodos:
+    image: gqltodos
+    volumes:
+      - ./:/server
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    env_file:
+      - .env
+    ports:
+      - 8000:8000
+    networks:
+      - gqlnetwork
+#    environment:
+#      - MONGODB_URI=mongodb://mongo/caris_databridge
+#    depends_on:
+#      - mongo
+
+#  mongo:
+#    image: mongo
+#    ports:
+#      - 27017:27017
+#environment:
+#   - MONGO_INITDB_ROOT_USERNAME=root
+#   - MONGO_INITDB_ROOT_PASSWORD=root
+# - MONGO_INITDB_DATABASE=caris_databridge
+#    networks:
+#      - gqlnetwork
+
+networks:
+  gqlnetwork:
+    driver: bridge
