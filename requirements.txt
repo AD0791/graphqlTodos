@@ -1,9 +1,9 @@
 fastapi
 python-jose
 pydantic
-uvicorn[standard]
+uvicorn
 motor
 pymongo
 graphene
 starlette-graphene3
-
+websockets
