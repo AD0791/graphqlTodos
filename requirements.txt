@@ -6,4 +6,4 @@ motor
 pymongo
 graphene
 starlette-graphene3
-websockets
+
